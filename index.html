@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
+    <title>Property</title>
+</head>
+<body>
+   <header>
+        <div id="hero">
+            <div id="mobile-menu">
+                <h2>Property</h2>
+                <p onclick="menuopen()" style="font-size: 25px;" class="fa-solid fa-bars" id="fabar"></p>
+                <p onclick="menuclose()" class="fa-solid fa-xmark" style="display:none;font-size: 20px;" id="faxmark"></p>
+                <div id="pc-menu">
+                    <ul>
+                        <li onclick="get('hero')">Home</li>
+                        <li onclick="get('properties')">Properties</li>
+                        <li onclick="get('services')">Services</li>
+                        <li onclick="get('about')">About</li>
+                        <li onclick="get('footer')">Contact Us</li>
+                    </ul>
+                </div>
+                <div id="menu-controls">
+                    <select id="lang-select" onchange="dilDeyis(this.value)">
+                        <option value="en">EN</option>
+                        <option value="az">AZ</option>
+                        <option value="ru">RU</option>
+                    </select>
+                    <button id="dark-btn" onclick="darkToggle()">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-txt">
+                <p>Easiest way to find your dream home</p>
+                <div id="data-mobile">
+                    <input type="text" placeholder="Your Zip Code or City. e.g New York">
+                    <button>Search</button>
+                </div>
+            </div>
+            <div id="leftmenu">
+                <ul id="ulleftmenu"></ul>
+            </div>
+        </div>
+   </header>
+   <main>
+    <section id="properties">
+        <div id="hero2">
+            <p>Popular Properties</p>
+            <button>View all properties</button>
+        </div>
+        <div class="carousel">
+          <div class="group"></div>
+          <div class="group" aria-hidden="true"></div>
+        </div>
+    </section>
+    <section id="services">
+        <h2 class="services-title" data-aos="fade-down">Our Services</h2>
+        <div class="services-grid"></div>
+    </section>
+    <section id="testimonials">
+        <div class="testimonials-header">
+            <h2 class="testimonials-title" data-aos="fade-right">Customer Says</h2>
+            <div class="testimonials-nav">
+                <button class="prev-btn"><i class="fa-solid fa-arrow-left"></i> Prev</button>
+                <button class="next-btn">Next <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+        <div class="swiper testimonials-slider">
+            <div class="swiper-wrapper" id="testimonials-wrapper"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="about-top" data-aos="fade-up">
+            <h2>Let's find home that's perfect for you</h2>
+            <p>We provide the best real estate services to help you find your dream property. Our team of experts is ready to assist you every step of the way.</p>
+        </div>
+        <div class="about-content">
+            <div class="about-features" id="about-features"></div>
+            <div class="about-img" data-aos="fade-left" data-aos-duration="800">
+                <img src="https://themewagon.github.io/property/images/hero_bg_3.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    <section id="counters">
+        <div class="counters-grid" id="counters-grid"></div>
+    </section>
+    <section id="cta">
+        <h2 data-aos="fade-up">Be a part of our growing real estate agents</h2>
+        <button data-aos="fade-up" data-aos-delay="200">Apply for Real Estate agent</button>
+    </section>
+    <section id="agents">
+        <div class="agents-top" data-aos="fade-up">
+            <h2>Our Agents</h2>
+            <p>Meet our professional team of real estate agents who are dedicated to helping you find the perfect property.</p>
+        </div>
+        <div class="agents-grid" id="agents-grid"></div>
+    </section>
+   </main>
+   <footer id="footer">
+    <div class="partners-section">
+        <h3>Trusted by Leading Companies</h3>
+        <div class="partners-wrapper">
+            <div class="partners-carousel partners-up">
+                <div class="partners-group" id="pg1"></div>
+                <div class="partners-group" id="pg2" aria-hidden="true"></div>
+            </div>
+            <div class="partners-carousel partners-down">
+                <div class="partners-group" id="pg3"></div>
+                <div class="partners-group" id="pg4" aria-hidden="true"></div>
+            </div>
+            <div class="partners-carousel partners-up">
+                <div class="partners-group" id="pg5"></div>
+                <div class="partners-group" id="pg6" aria-hidden="true"></div>
+            </div>
+            <div class="partners-carousel partners-down">
+                <div class="partners-group" id="pg7"></div>
+                <div class="partners-group" id="pg8" aria-hidden="true"></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-top">
+        <div class="footer-brand" data-aos="fade-up">
+            <h2>Property</h2>
+            <p>Your trusted partner in finding the perfect home. We make real estate simple, transparent and enjoyable.</p>
+            <div class="footer-socials" id="footer-socials"></div>
+        </div>
+        <div class="footer-links" id="footer-links"></div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 — Redesign & Development by Matin Fatizada</p>
+        <p>Inspired by ThemeWagon</p>
+    </div>
+   </footer>
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+   <script>AOS.init({ once: true });</script>
+   <script src="app.js"></script>
+</body>
+</html>
